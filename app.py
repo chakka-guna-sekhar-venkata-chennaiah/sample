@@ -12,7 +12,7 @@ load_dotenv()
 # Use the OpenAI API key from the environment variable
 
 openai_api_key = st.secrets['openai']["OPENAI_API_KEY"]
-if openapi_api_key==1:
+if not openai_api_key:
     st.error("OpenAI API key not found. Please set the OPENAI_API_KEY environment variable.")
 else:
 
